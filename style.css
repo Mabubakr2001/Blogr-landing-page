@@ -29,9 +29,7 @@ ul{
 /* Header */
 
 header{
-    width: 100vw;
     height: 100vh;
-    background-color: var(--mainColor);
     border-bottom-left-radius: 8rem;
     background: url(images/bg-pattern-intro.svg);
     background-position: center;
@@ -40,40 +38,40 @@ header{
     background-color: var(--mainColor);
 }
 
-header nav{
+header .container nav{
     display: flex;
     align-items: center;
     padding: 1.5rem 0;
 }
 
-header nav > h3{
+header .container nav > h3{
     font-size: 3rem;
     font-family: "Ubuntu", sans-serif;
     color: var(--mainColor2);
     margin-bottom: 10px;
 }
 
-header nav .website-nav{
+header .container nav .website-nav{
     flex: 1;
     display: flex;
     align-items: center;
     margin-left: 3.2rem;
 }
 
-header nav .website-nav li{
+header .container nav .website-nav li{
     margin-right: 1.6rem;
     position: relative;
 }
 
-header nav .website-nav li img{
+header .container nav .website-nav li img{
     transition: .5s;
 }
 
-header nav .website-nav li:hover img{
+header .container nav .website-nav li:hover img{
     transform: rotate(-180deg);
 }
 
-header nav .website-nav li a{
+header .container nav .website-nav li a{
     font-size: 1.1rem;
     text-decoration: none;
     color: var(--mainColor2);
@@ -84,7 +82,7 @@ header nav .website-nav li a{
     font-family: "Ubuntu", sans-serif;
 }
 
-header nav .website-nav li a:hover::after{
+header .container nav .website-nav li a:hover::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -95,7 +93,7 @@ header nav .website-nav li a:hover::after{
 
 /* Drop-menu */
 
-header nav .website-nav li .drop-menu{
+header .container nav .website-nav li .drop-menu{
    position: absolute;
    left: 0;
    top: 1rem;
@@ -108,21 +106,21 @@ header nav .website-nav li .drop-menu{
    display: none;
 }
 
-header nav .website-nav li:hover .drop-menu{
+header .container nav .website-nav li:hover .drop-menu{
     display: inline-flex;
     flex-direction: column;
 }
 
-header nav .website-nav li .drop-menu li{
+header .container nav .website-nav li .drop-menu li{
     margin: 0 0 10px;
     display: block;
 }
 
-header nav .website-nav li .drop-menu li:last-child{
+header .container nav .website-nav li .drop-menu li:last-child{
     margin-bottom: 0;
 }
 
-header nav .website-nav li .drop-menu li a{
+header .container nav .website-nav li .drop-menu li a{
     margin: 0;
     padding: 0;
     color: #0000006e;
@@ -130,20 +128,20 @@ header nav .website-nav li .drop-menu li a{
     font-weight: 500;
 }
 
-header nav .website-nav li .drop-menu li a:hover{
+header .container nav .website-nav li .drop-menu li a:hover{
     color: #000;
 }
 
-header nav .register{
+header .container nav .register{
     display: flex;
     align-items: center;
 }
 
-header nav .register li{
+header .container nav .register li{
     margin-left: 20px;
 }
 
-header nav .register li a{
+header .container nav .register li a{
     font-size: 1.1rem;
     font-weight: 700;
     text-decoration: none;
@@ -153,11 +151,11 @@ header nav .register li a{
     display: inline-block;
 }
 
-header nav .register li:nth-child(1) a:hover{
+header .container nav .register li:nth-child(1) a:hover{
     color: #eee;
 }
 
-header nav .register li:nth-child(2) a{
+header .container nav .register li:nth-child(2) a{
     padding: 0.7rem 2rem;
     color: var(--mainColor);
     background-color: var(--mainColor2);
@@ -165,11 +163,11 @@ header nav .register li:nth-child(2) a{
     transition: .3s;
 }
 
-header nav .register li:nth-child(2) a:hover{
+header .container nav .register li:nth-child(2) a:hover{
     transform: scale(0.9);
 }
 
-header nav #mobile-menu{
+header .container nav #mobile-menu{
     display: none;
 }
 
@@ -431,4 +429,174 @@ footer .container .footer-nav div ul li a{
 
 footer .container .footer-nav div ul li a:hover{
     color: var(--mainColor2);
+}
+
+/* Mobile phones */
+
+@media (min-width: 250px) and (max-width: 767px){
+    /* Header */
+
+    header{
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+    header .container{
+        height: 100%;
+    }
+
+    header .container nav .website-nav,
+    header .container nav .register{
+        display: none;
+    }
+
+    header .container nav > h3{
+        flex: 1;
+    }
+
+    header .container nav #mobile-menu{
+        display: block;
+    }
+
+    header .container .header-content{
+        position: static;
+    }
+
+    /* Design Section */
+
+    .design{
+        padding: 50px 0;
+        height: fit-content;
+    }
+    
+    .design > h3{
+        font-size: 2.2rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+    
+    .design .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .design .container > img{
+        width: 80%;
+        height: 50%;
+        position: static;
+    }
+    
+    .design .container .design-content{
+        width: 80%;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    
+    .design .container .design-content div:nth-child(1){
+        margin-bottom: 50px;
+    }
+    
+    .design .container .design-content div h3{
+        font-size: 2rem;
+    }
+
+    /* Infrastructure section*/
+
+    .infrastructure{
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+    .infrastructure .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .infrastructure .container .infrastructure-imgs{
+        position: static;
+        width: 80%;
+        height: 80%;
+    }
+
+    .infrastructure .container .infrastructure-imgs img:nth-child(1){
+        width: 100%;
+        height: 100%;
+    }
+
+    .infrastructure .container .infrastructure-imgs img:nth-child(2){
+        display: none;
+    }
+
+    .infrastructure .container .infrastructure-content{
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .infrastructure .container .infrastructure-content h3{
+        font-size: 2rem;
+    }
+
+    /* Features Section */
+
+    .features{
+        padding: 10px 0 50px;
+    }
+
+    .features .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .features .container .features-imgs{
+        width: 100%;
+    }
+
+    .features .container .features-imgs img:nth-child(1){
+        display: none;
+    }
+
+    .features .container .features-imgs img:nth-child(2){
+        width: 100%;
+    }
+
+    .features .container .features-content{
+        position: static;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Footer */
+
+    footer .container .footer-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container .footer-nav > h3{
+        margin-bottom: 30px;
+    }
+
+    footer .container .footer-nav div{
+        margin-bottom: 30px;
+    }
+
+    footer .container .footer-nav div h6{ 
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    footer .container .footer-nav div ul{
+        text-align: center;
+    }
 }
