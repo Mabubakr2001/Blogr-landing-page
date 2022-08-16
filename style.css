@@ -38,6 +38,10 @@ header{
     background-color: var(--mainColor);
 }
 
+header .container{
+    position: relative;
+}
+
 header .container nav{
     display: flex;
     align-items: center;
@@ -233,6 +237,10 @@ header .container .header-content .header-content--anchors li:nth-child(2):hover
     color: var(--mainColor);
 }
 
+header .container .mobile-nav{
+    display: none;
+}
+
 /* Design section */
 
 .design{
@@ -353,6 +361,10 @@ header .container .header-content .header-content--anchors li:nth-child(2):hover
     left: -250px;
 }
 
+.features .container .features-imgs img:nth-child(2){
+    display: none;
+}
+
 .features .container .features-content{
     position: absolute;
     width: 42%;
@@ -456,10 +468,102 @@ footer .container .footer-nav div ul li a:hover{
 
     header .container nav #mobile-menu{
         display: block;
+        cursor: pointer;
     }
 
     header .container .header-content{
         position: static;
+    }
+
+    header .container .mobile-nav{
+        display: block;
+        background-color: var(--mainColor2);
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        top: 100px;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgb(65, 65, 65);
+        text-align: center;
+        z-index: 100;
+        transition: 0.5s ease-out;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li{
+        margin-bottom: 25px;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .mobile-nav--list---li----list{
+        display: none;
+        text-align: center;
+        line-height: 40px;
+        width: 100%;
+        background-color: rgb(236, 236, 236);
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .mobile-nav--list---li----list li a{
+        text-decoration: none;
+        display: inline-block;
+        text-decoration: none;
+        color: #0000006b;
+        font-size: 1.2rem;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .mobile-nav--list---li----list li a:hover{
+        color: #000;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li > a{
+        display: inline-block;
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li:hover .mobile-nav--list---li----list{
+        display: block;
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li img{
+        transition: 0.5s;
+    }
+    
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li:hover img{
+        transform: rotate(-180deg);
+    }
+
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li > a:nth-child(1),
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li > a:nth-child(2),
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li > a:nth-child(3){
+        margin-right: 8px;
+        cursor: default;
+    }
+
+    header .container .mobile-nav .login li:nth-child(1){
+        margin-bottom: 20px;
+    }
+
+    header .container .mobile-nav .login li a{
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        padding: 10px 30px;
+        color: var(--mainColor2);
+        border-radius: 30px;
+        background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+
+    header .container .mobile-nav .login li a:hover{
+        background: linear-gradient(90deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
     }
 
     /* Design Section */
@@ -567,6 +671,7 @@ footer .container .footer-nav div ul li a:hover{
 
     .features .container .features-imgs img:nth-child(2){
         width: 100%;
+        display: block;
     }
 
     .features .container .features-content{
