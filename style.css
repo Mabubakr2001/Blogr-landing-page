@@ -468,7 +468,6 @@ footer .container .footer-nav div ul li a:hover{
 
     header .container nav #mobile-menu{
         display: block;
-        cursor: pointer;
     }
 
     header .container .header-content{
@@ -494,8 +493,9 @@ footer .container .footer-nav div ul li a:hover{
         margin-bottom: 25px;
     }
 
-    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .mobile-nav--list---li----list{
-        display: none;
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .product,
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .company,
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .connect{
         text-align: center;
         line-height: 40px;
         width: 100%;
@@ -504,18 +504,17 @@ footer .container .footer-nav div ul li a:hover{
         border-radius: 10px;
     }
 
-    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .mobile-nav--list---li----list li a{
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .product li a,
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .company li a,
+    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .connect li a{
         text-decoration: none;
         display: inline-block;
         text-decoration: none;
-        color: #0000006b;
+        color: #0000008a;
         font-size: 1.2rem;
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
-    }
-
-    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li .mobile-nav--list---li----list li a:hover{
-        color: #000;
+        cursor: default;
     }
 
     header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li > a{
@@ -527,16 +526,8 @@ footer .container .footer-nav div ul li a:hover{
         font-weight: 500;
     }
 
-    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li:hover .mobile-nav--list---li----list{
-        display: block;
-    }
-
     header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li img{
         transition: 0.5s;
-    }
-    
-    header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li:hover img{
-        transform: rotate(-180deg);
     }
 
     header .container .mobile-nav .mobile-nav--list .mobile-nav--list---li > a:nth-child(1),
